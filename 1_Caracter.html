@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>Caracterizacao</title>
+    <link rel="stylesheet" href="./css/stylesheet.css" type="text/css">
+    <script src="./js/form_manager.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body id="background">
+
+    <div >
+        <div class="head">
+            <h1 style="color: #ffffff">Pesquisa de Fotos Digitais </h1>
+        </div>
+
+        <div >
+
+            <form name="formCara" method="POST" onsubmit="validateFormOne()" action="2_Tarefas.html">
+                <div>
+
+
+                        <div class="container-fluid" >
+                            <h2 style="margin: 5px;color: #ffffff"> Dados Pessoais</h2>
+
+                            <div class="card" style="margin: 5px">
+                                <div class="card-body">
+                                    <h3>1 - Idade* : </h3>
+                                    <input id = "_11" type="radio" name="primeira" value=" menos que 18">
+                                    <label for = "_11">menos que 18</label>
+
+                                    <input id = "_12" type="radio" name="primeira" value="18-25">
+                                    <label for = "_12" >18-25</label>
+
+                                    <input id = "_13" type="radio" name="primeira" value="26-33">
+                                    <label for = "_13"> 26-33 </label>
+
+                                    <input id = "_14" type="radio" name="primeira" value="34-40">
+                                    <label for = "_14"> 34-40 </label>
+
+                                    <input id = "_15" type="radio" name="primeira" value="mais que 40" required>
+                                    <label for = "_15"> mais que 40 </label>
+                                </div>
+                            </div>
+
+                            <div class="card" style="margin: 5px">
+                                <div class="card-body">
+                                    <h3>2 - Género* :</h3>
+                                    <input id = "_21" type="radio" name="segunda" value="masculino" required>
+                                    <label for = "_21"> Masculino </label>
+
+                                    <input id = "_22" type="radio" name="segunda" value="feminino">
+                                    <label for = "_22"> Feminino </label>
+                                </div>
+                            </div>
+
+                            <div class="card" style="margin: 5px">
+                                <div class="card-body">
+                                    <h3>3 - Com que frequencia usa a internet?</h3>
+                                    <input id = "31" type="radio" name="terceira" value="Mais do que 2h por dia">
+                                    <label for = "31"> Mais do que 2h por dia </label>
+                                    <br>
+                                    <input id = "32" type="radio" name="terceira" value="Menos do que 2h por dia">
+                                    <label for = "32"> Menos do que 2h por dia </label>
+                                    <br>
+                                    <input id = "33" type="radio" name="terceira" value="Varias vezes por semana">
+                                    <label for = "33"> Varias vezes por semana </label>
+                                    <br>
+                                    <input id = "34" type="radio" name="terceira" value="Semanalmente ">
+                                    <label for = "34"> Semanalmente </label>
+                                    <br>
+                                    <input id = "35" type="radio" name="terceira" value="Mensalmente">
+                                    <label for = "35"> Mensalmente </label>
+                                </div>
+                            </div>
+
+                            <div class="card" style="margin: 5px">
+                                <div class="card-body">
+                                    <h3>4 – Indique, por ordem de preferência, os Web browsers que mais utiliza. Deve indicar 3. Utilize valores de 1 a 3, sendo 1 o mais preferido e 3 o menos. **</h3>
+                                    <select id="41" name = "quartaFirstBrowser" onchange="checkBrowser(this)" required>
+                                        <option value = "">Selecione uma opção</option>
+                                        <option value="Chrome">Chrome</option>
+                                        <option value="Firefox">Firefox</option>
+                                        <option value="Internet Explorer">Internet Explorer</option>
+                                        <option value="Opera">Opera</option>
+                                        <option value="Safari">Safari</option>
+                                    </select>
+                                    <br>
+                                    <select id="42" name = "quartaSecondBrowser" onchange="checkBrowser(this)">
+                                        <option value = "">Selecione uma opção</option>
+                                        <option value="Chrome">Chrome</option>
+                                        <option value="Firefox">Firefox</option>
+                                        <option value="Internet Explorer">Internet Explorer</option>
+                                        <option value="Opera">Opera</option>
+                                        <option value="Safari">Safari</option>
+                                    </select>
+                                    <br>
+                                    <select id="43" name = "quartaThirdBrowser" onchange="checkBrowser(this)">
+                                        <option value = "">Selecione uma opção</option>
+                                        <option value="Chrome">Chrome</option>
+                                        <option value="Firefox">Firefox</option>
+                                        <option value="Internet Explorer">Internet Explorer</option>
+                                        <option value="Opera">Opera</option>
+                                        <option value="Safari">Safari</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="card" style="margin: 5px">
+                                <div class="card-body">
+                                    <h3>5 - Utiliza outros websites ou aplicações para procurar imagens/fotografias digitais? </h3>
+                                    <input id="51" type="radio" name="quinta" value="Nao" onclick="Write_Text()">Nao
+                                    <input id="52" type="radio" name="quinta" value="Sim" onclick="Write_Text()">Sim. 6 - Quais?
+                                    <input id="61" type="text" name="sexta" onclick="Write_Text()" value = >
+                                </div>
+                            </div>
+                            <br>
+                            <div style="margin: 5px">
+                                <input id="sub" type="submit" name="submit" value="Proximo">
+                            </div>
+                        </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

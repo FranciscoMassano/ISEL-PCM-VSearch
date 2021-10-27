@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="PCM Final Project - Visual Search">
+    <meta name="keywords" content="HTML5, CSS, JavaScript">
+    <meta name="author" content="Rui Jesus">
+    <meta charset="UTF-8">
+    <title>V Search</title>
+    <link rel="stylesheet" href="css/VSearchStyle.css">
+    <script src="js/Image_Processing.js"></script>
+    <script src="js/XML_Database.js"></script>
+    <script src="js/ISearchEngine.js"></script>
+    <script src="js/ISearchEngine_Manager.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+</head>
+<body class=".bg-primary" id="background">
+
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+                <img src="web/logo_transparent.png" class="img-fluid" style="width: 10%">
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+            <div id="searchBar" style="margin-bottom:10px ">
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-light" style="background: white" type="submit" onclick="searchByKeyword()">Pesquisa por</button>
+                    </div>
+                    <select class="custom-select" id="search">
+                        <option selected>Palavra Chave</option>
+                        <option value="beach">Beach</option>
+                        <option value="birthday">Birthday</option>
+                        <option value="face">Face</option>
+                        <option value="indoor">Indoor</option>
+                        <option value="manmade/artificial">Artificial</option>
+                        <option value="manmade/urban">Urban</option>
+                        <option value="manmade/manmade">Man Made</option>
+                        <option value="marriage">Marriage</option>
+                        <option value="nature">Nature</option>
+                        <option value="no_people">No People</option>
+                        <option value="outdoor">Outdoor</option>
+                        <option value="party">Party</option>
+                        <option value="people">People</option>
+                        <option value="snow">Snow</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+        <div class="d-flex justify-content-center">
+            <button type="submit" id="#ff0000" onclick="searchByColor(this)" class="btn btn-light" style="margin: 10px;background-color:#ff0000;"></button>
+            <button type="submit" id="#ff4500" onclick="searchByColor(this)" class="btn btn-light" style="margin: 10px;background-color:#ff4500;"></button>
+            <button type="submit" id="#ffff00" onclick="searchByColor(this)" class="btn btn-light" style="margin: 10px;background-color:#ffff00;"></button>
+            <button type="submit" id="#008000"  onclick="searchByColor(this)" class="btn btn-light" style="margin: 10px;background-color:#008000;"></button>
+            <button type="submit" id="#00ffff" onclick="searchByColor(this)" class="btn btn-light"style="margin: 10px;background-color:#00ffff;"></button>
+            <button type="submit" id="#0000ff"  onclick="searchByColor(this)" class="btn btn-light" style="margin: 10px;background-color:#0000ff;"></button>
+            <button type="submit" id="#800080"  onclick="searchByColor(this)" class="btn btn-light" style="margin: 10px;background-color:#800080;"></button>
+            <button type="submit" id="#ff1493" onclick="searchByColor(this)" class="btn btn-light" style="margin: 10px;background-color:#ff1493;"></button>
+            <button type="submit" id="#ffffff"  onclick="searchByColor(this)" class="btn btn-light" style="margin: 10px;background-color:#ffffff;"></button>
+            <button type="submit" id="#808080"  onclick="searchByColor(this)" class="btn btn-light" style="margin: 10px;background-color:#808080;"></button>
+            <button type="submit" id="#000000"  onclick="searchByColor(this)" class="btn btn-light" style="margin: 10px;background-color:#000000;"></button>
+            <button type="submit" id="#8b4513" onclick="searchByColor(this)" class="btn btn-light" style="margin: 10px;background-color:#8b4513;"></button>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <img id="btn_previous" src="web/previous.png" style="cursor: pointer; max-width: 60px; max-height: 60px; margin-top: 20px" alt=""/>
+            <img id="btn_music" src="web/play.png"  style="cursor: pointer;max-width: 60px; max-height: 60px; margin-top: 20px" alt=""/>
+            <img id="btn_next" src="web/next.png"  style="cursor: pointer;max-width: 60px; max-height: 60px; margin-top: 20px" alt=""/>
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+            <div id="view">
+                <canvas id="canvas" width="1130" height="930">
+                    Your browser doesn't recognize the canvas element
+                </canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="d-flex justify-content-lg-center">
+            <a class="btn btn-light" href="0_Intro.html" role="button" data-toggle="tooltip" data-placement="top" title="Responda a um questionario acerca deste motor de busca" style="margin: 10px">Questionario de Usabilidade</a>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+            <footer>
+                <p style="color: white">Francisco Gomes - PCM 1920</p>
+            </footer>
+        </div>
+    </div>
+
+    <script> window.onload = main(); </script>
+
+</body>
+</html>

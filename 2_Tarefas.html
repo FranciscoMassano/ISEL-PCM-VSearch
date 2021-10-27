@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarefas</title>
+    <link rel="stylesheet" href="./css/stylesheet.css" type="text/css">
+    <script src="./js/form_manager.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body id="background">
+
+<div >
+    <div class="head">
+        <h1 style="color: #ffffff">Pesquisa de Fotos Digitais </h1>
+    </div>
+
+    <div >
+
+        <form name="formTare" method="POST" onsubmit="validateFormTwo()" action="3_AvGeral.html">
+            <div>
+                <div class="container-fluid" >
+                    <h1 style="margin: 5px;color: #ffffff"> Tarefas</h1>
+                    <h2 style="margin: 5px;color: #ffffff">Tarefa 1 - Explorar o website </h2>
+                    <h3 style="margin: 5px;color: #ffffff">Explore o website livremente durante alguns minutos de modo a ficar mais familiarizado com as funcionalidades do website. </h3>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3>7 - Indique se encontrou algum erro ou se sentiu alguma dificuldade em perceber as funcionalidades principais do website. </h3>
+                            <textarea style="resize: none" rows="2" cols="100" name="setima" id="71"></textarea>
+                        </div>
+                    </div>
+
+                    <h2 style="margin: 5px;color: #ffffff">Tarefa 2 - Pesquisar Imagens </h2>
+                    <h3 style="margin: 5px;color: #ffffff">Escolha a opção de pesquisa por palavra chave, selecione uma categoria à sua escolha e observe os resultados. Repita a pesquisa com outras categorias.  </h3>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3>8 - Como classifica os resultados obtidos pela pesquisa por categoria (1 significa “Maus” e 5 significa “Excelentes”)? * </h3>
+                            1
+                            <input id="81" type="radio" name="oitava"  value=1  required onclick>
+                            <input id="82" type="radio" name="oitava" value=2  required onclick>
+                            <input id="83" type="radio" name="oitava"  value=3  required onclick>
+                            <input id="84" type="radio" name="oitava"  value=4  required onclick>
+                            <input id="85" type="radio" name="oitava" value=5  required onclick>
+                            5
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3>9 - Que dificuldades encontrou para realizar a pesquisa e visualizar os resultados?  </h3>
+                            <textarea style="resize: none" rows="2" cols="100" name="nona" id="91"></textarea>
+                        </div>
+                    </div>
+
+                    <h3 style="margin: 5px;color: #ffffff">Escolha a opção de pesquisa por palavra chave, selecione uma categoria à sua escolha e observe os resultados. Repita a pesquisa com outras categorias.  </h3>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3 >10 - Como classifica os resultados obtidos pela pesquisa por cor (1 significa “Maus” e 5 significa “Excelentes”)? *</h3>
+                            1
+                            <input id="101" type="radio" name="decima"  value=1  required onclick>
+                            <input id="102" type="radio" name="decima" value=2  required onclick>
+                            <input id="103" type="radio" name="decima"  value=3  required onclick>
+                            <input id="104" type="radio" name="decima"  value=4  required onclick>
+                            <input id="105" type="radio" name="decima" value=5  required onclick>
+                            5
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3 >11 - Que dificuldades encontrou para realizar a pesquisa e visualizar os resultados? </h3>
+                            <textarea style="resize: none" rows="2" cols="100" name="decimaPrim" id="111"></textarea>
+                        </div>
+                    </div>
+
+                    <h3 style="margin: 5px;color: #ffffff">Escolha a opção de pesquisa por imagem semelhante, selecione uma imagem à sua escolha e observe os resultados. </h3>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3 >12 - Como classifica os resultados obtidos pela pesquisa por imagem semelhante (1 significa “Maus” e 5 significa “Excelentes”)? * </h3>
+                            1
+                            <input id="121" type="radio" name="decimaSeg"  value=1  required onclick>
+                            <input id="122" type="radio" name="decimaSeg" value=2  required onclick>
+                            <input id="123" type="radio" name="decimaSeg"  value=3  required onclick>
+                            <input id="124" type="radio" name="decimaSeg"  value=4  required onclick>
+                            <input id="125" type="radio" name="decimaSeg" value=5  required onclick>
+                            5
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3 >13 - Como classifica a utilidade da pesquisa por Imagens Semelhantes (1 significa “Pouca” e 5 significa “Muita”)? *</h3>
+                            1
+                            <input id="131" type="radio" name="decimaTer"  value=1  required onclick>
+                            <input id="132" type="radio" name="decimaTer" value=2  required onclick>
+                            <input id="133" type="radio" name="decimaTer"  value=3  required onclick>
+                            <input id="134" type="radio" name="decimaTer"  value=4  required onclick>
+                            <input id="135" type="radio" name="decimaTer" value=5  required onclick>
+                            5
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3 >14 - Que dificuldades encontrou para realizar a pesquisa e visualizar os resultados?</h3>
+                            <textarea style="resize: none" rows="2" cols="100" name="decimaQua" id="141"></textarea>
+                        </div>
+                    </div>
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3 >15 - Qual o tipo de pesquisa que acha mais adequado? </h3>
+                            <textarea style="resize: none" rows="2" cols="100" name="decimaQui" id="151"></textarea>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div style="margin: 5px">
+                        <input id="sub" type="submit" name="submit" value="Proximo">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

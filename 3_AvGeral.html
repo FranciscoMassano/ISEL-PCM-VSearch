@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Avaliação Global </title>
+    <link rel="stylesheet" href="./css/stylesheet.css" type="text/css">
+    <script src="./js/form_manager.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body id="background" >
+    <div>
+        <div class="head">
+            <h1>Pesquisa de Fotos Digitais </h1>
+        </div>
+        <form name="formAval" method="POST" onsubmit="validateFormThree()" action="4_Results.html">
+            <div>
+                <div class="container-fluid" >
+                    <h1 style="margin: 5px;color: #ffffff"> Avaliação Global</h1>
+                    <h2 style="margin: 5px;color: #ffffff">Por favor, responda às seguintes questões para avaliar a sua experiência de utilização e a usabilidade do website.</h2>
+                    <h3 style="margin: 5px;color: #ffffff">Experiência de utilização</h3>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3>16 - Para cada par de adjetivos, selecione a opção que melhor descreve a sua experiência de utilização deste website.</h3>
+                            Fantastica
+                            <input id="161_1" type="radio" name="decimaSex"  value=1>
+                            <input id="162_1" type="radio" name="decimaSex" value=2 >
+                            <input id="163_1" type="radio" name="decimaSex"  value=3>
+                            <input id="164_1" type="radio" name="decimaSex"  value=4>
+                            <input id="165_1" type="radio" name="decimaSex" value=5 >
+                            Horrivel
+                            <br>
+                            Estimulante
+                            <input id="161_2" type="radio" name="decimaSex2"  value=1>
+                            <input id="162_2" type="radio" name="decimaSex2" value=2 >
+                            <input id="163_2" type="radio" name="decimaSex2"  value=3>
+                            <input id="164_2" type="radio" name="decimaSex2"  value=4>
+                            <input id="165_2" type="radio" name="decimaSex2" value=5>
+                            Aborrecida
+                            <br>
+                            Gratificante
+                            <input id="161_3" type="radio" name="decimaSex3"  value=1>
+                            <input id="162_3" type="radio" name="decimaSex3" value=2>
+                            <input id="163_3" type="radio" name="decimaSex3"  value=3>
+                            <input id="164_3" type="radio" name="decimaSex3"  value=4>
+                            <input id="165_3" type="radio" name="decimaSex3" value=5>
+                            Frustrante
+                            <br>
+                            Facil
+                            <input id="161_4" type="radio" name="decimaSex4"  value=1>
+                            <input id="162_4" type="radio" name="decimaSex4" value=2>
+                            <input id="163_4" type="radio" name="decimaSex4"  value=3>
+                            <input id="164_4" type="radio" name="decimaSex4"  value=4>
+                            <input id="165_4" type="radio" name="decimaSex4" value=5>
+                            Dificil
+                        </div>
+                    </div>
+
+                    <h2 style="margin: 5px;color: #ffffff">SUS - System Usability  Scale</h2>
+                    <h3 style="margin: 5px;color: #ffffff">Para recolher as respostas é utilizada uma escala do tipo Likert com 5 opções de escolha (1 significa “Discorda completamente” e 5 significa “Concorda completamente”).</h3>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3>17 - Acho que gostaria de utilizar este website com frequência. * </h3>
+                            <div class="slides">
+                                <p>Discorda completamente </p>
+                                <input id="171" type="range" name="decimaSet" min="0" max="5" required>
+                                <p class="p1"> Concorda Completamente</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3>18 - Considerei o website mais complexo do que necessário. * </h3>
+                            <div class="slides">
+                                <p>Discorda completamente </p>
+                                <input id="181" type="range" name="decimaOit" min="0" max="5" required>
+                                <p class="p1"> Concorda Completamente</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 style="margin: 5px;color: #ffffff">Escolha a opção de pesquisa por palavra chave, selecione uma categoria à sua escolha e observe os resultados. Repita a pesquisa com outras categorias.  </h3>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3>19 - Achei o website fácil de utilizar. * </h3>
+                            <div class="slides">
+                                <p>Discorda completamente </p>
+                                <input id="191" type="range" name="decimaNon" min="0" max="5" required>
+                                <p class="p1"> Concorda Completamente</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3>20 - Achei o website fácil de utilizar. * </h3>
+                            <div class="slides">
+                                <p>Discorda completamente </p>
+                                <input id="201" type="range" name="vigesima" min="0" max="5" required>
+                                <p class="p1"> Concorda Completamente</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 style="margin: 5px;color: #ffffff">Escolha a opção de pesquisa por imagem semelhante, selecione uma imagem à sua escolha e observe os resultados. </h3>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3>21 - Achei o website fácil de utilizar. * </h3>
+                            <div class="slides">
+                                <p>Discorda completamente </p>
+                                <input id="211" type="range" name="vigesimaPrim" min="0" max="5" required>
+                                <p class="p1"> Concorda Completamente</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3>22 - Achei que este website tinha muitas inconsistências. * </h3>
+                            <div class="slides">
+                                <p>Discorda completamente </p>
+                                <input id="221" type="range" name="vigesimaSeg" min="0" max="5" required>
+                                <p class="p1"> Concorda Completamente</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3>23 - Suponho que a maioria das pessoas aprenderia a utilizar rapidamente este website. *  </h3>
+                            <div class="slides">
+                                <p>Discorda completamente </p>
+                                <input id="231" type="range" name="vigesimaTer" min="0" max="5" required>
+                                <p class="p1"> Concorda Completamente</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin: 5px">
+                    <div class="card-body">
+                        <h3>24 - Considerei o website muito complicado de utilizar. *  </h3>
+                        <div class="slides">
+                            <p>Discorda completamente </p>
+                            <input id="241" type="range" name="vigesimaQua" min="0" max="5" required>
+                            <p class="p1"> Concorda Completamente</p>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3>25 - Senti-me muito confiante a utilizar este website. * </h3>
+                            <div class="slides">
+                                <p>Discorda completamente </p>
+                                <input id="251" type="range" name="vigesimaQui" min="0" max="5" required>
+                                <p class="p1"> Concorda Completamente</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin: 5px">
+                        <div class="card-body">
+                            <h3>26 - Tive que aprender muito antes de conseguir lidar com este website. * </h3>
+                            <div class="slides">
+                                <p>Discorda completamente </p>
+                                <input id="261" type="range" name="vigesimaSex" min="0" max="5" required>
+                                <p1>Concorda Completamente</p1>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div style="margin: 5px">
+                        <input id="sub" type="submit" name="submit" value="Proximo">
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
